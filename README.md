@@ -68,7 +68,7 @@ rather than failing after you have already approved in a browser.
 SeqBridge collects nothing. There is no analytics, no telemetry, and no server
 operated by the developer — the app talks only to the BaseSpace instance you
 sign in to. Full details, including how sign-in tokens are stored, are in the
-[privacy policy](docs/PRIVACY_POLICY.md).
+[privacy policy](Privacy.md).
 
 ## Support
 
