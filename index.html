@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SeqBridge Support</title>
+<meta name="description" content="Support, troubleshooting and contact information for SeqBridge, a macOS client for Illumina BaseSpace Sequence Hub.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f6f7f9;
+    --border: #e2e5ea;
+    --text: #1a1c1f;
+    --muted: #5b6169;
+    --accent: #1f6feb;
+    --accent-soft: #eaf2fe;
+    --code-bg: #f0f2f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1115;
+      --surface: #171a20;
+      --border: #2a2f38;
+      --text: #e6e8eb;
+      --muted: #9aa2ad;
+      --accent: #6ea8fe;
+      --accent-soft: #16233a;
+      --code-bg: #1c2029;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .4rem; letter-spacing: -.02em; }
+  h2 { font-size: 1.15rem; margin: 2.5rem 0 .75rem; letter-spacing: -.01em; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .35rem; }
+  p, li { color: var(--text); }
+  .lede { color: var(--muted); margin: 0; }
+  a { color: var(--accent); }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.35rem;
+    margin: 1.25rem 0;
+  }
+  .contact { background: var(--accent-soft); border-color: var(--accent); }
+  .contact p { margin: .35rem 0; }
+  .email { font-size: 1.15rem; font-weight: 600; }
+  code, .path {
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: .12em .38em;
+    font: .875em/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  dl { margin: 0; }
+  dt { font-weight: 600; margin-top: 1.25rem; }
+  dd { margin: .3rem 0 0; color: var(--muted); }
+  dd :is(code, .path) { color: var(--text); }
+  ul { padding-left: 1.25rem; }
+  li { margin: .3rem 0; }
+  table { border-collapse: collapse; width: 100%; margin: .75rem 0; font-size: .95rem; }
+  th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; }
+  .table-scroll { overflow-x: auto; }
+  footer {
+    margin-top: 3rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted); font-size: .875rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>SeqBridge Support</h1>
+  <p class="lede">Help, troubleshooting and contact for SeqBridge — a macOS app for browsing
+  and transferring data in Illumina BaseSpace Sequence Hub.</p>
+</header>
+
+<div class="card contact">
+  <p><strong>Questions, bug reports, or anything else:</strong></p>
+  <p class="email"><a href="mailto:seqbridge.ngs@gmail.com">seqbridge.ngs@gmail.com</a></p>
+  <p>Every message is read and answered, normally within two business days.
+  You do not need an account anywhere to get in touch.</p>
+  <p>If you prefer a public tracker, you can also
+  <a href="https://github.com/dmatica/SeqBridge/issues">open an issue on GitHub</a>
+  (a free GitHub account is required for that route).</p>
+</div>
+
+<h2>What SeqBridge needs</h2>
+<div class="table-scroll">
+<table>
+  <tr><th>Requirement</th><th>Detail</th></tr>
+  <tr><td>macOS</td><td>14 (Sonoma) or later — Apple Silicon or Intel</td></tr>
+  <tr><td>Account</td><td>An Illumina BaseSpace Sequence Hub account. SeqBridge does not create accounts and has no account of its own.</td></tr>
+  <tr><td>Network</td><td>Outbound HTTPS to the BaseSpace region you sign in to</td></tr>
+</table>
+</div>
+
+<h2>Getting started</h2>
+<ol>
+  <li><strong>Grant the folder.</strong> On first launch SeqBridge explains, then asks for
+  access to a folder named <span class="path">.basespace</span> in your home folder,
+  creating it if it is not there. This is the same folder the official BaseSpace CLI
+  uses, so profiles you already have are picked up automatically.</li>
+  <li><strong>Sign in.</strong> Click <strong>Sign In with BaseSpace</strong>, pick your
+  region, and name the profile.</li>
+  <li><strong>Approve in the browser.</strong> SeqBridge shows a short code and opens
+  Illumina's sign-in page. Approve there and the profile is ready. Nothing else needs
+  to be installed.</li>
+</ol>
+
+<h2>Common questions</h2>
+<dl>
+
+<dt>Why is SeqBridge asking for access to a folder?</dt>
+<dd>SeqBridge is sandboxed, so it cannot read anything on your Mac until you say it
+may. It asks once for <span class="path">.basespace</span>, where connection profiles
+live, and after that for nothing except the folders you pick for downloads. It cannot
+read anywhere else.</dd>
+
+<dt>The folder prompt appeared and I dismissed it. How do I get it back?</dt>
+<dd>The main window offers <strong>Grant Access…</strong>, and clicking
+<strong>Sign In with BaseSpace</strong> will ask again as well. Nothing is lost by
+declining the first time.</dd>
+
+<dt>My region is missing from the sign-in picker.</dt>
+<dd>SeqBridge is registered in every BaseSpace region except Middle East. Unregistered
+regions are shown but disabled, with the reason, rather than failing after you have
+already approved in a browser. If you need Middle East, please email — knowing there
+is demand is what moves it up the list.</dd>
+
+<dt>Sign-in opened my browser but the app never picked it up.</dt>
+<dd>The approval and the app have to reach the same BaseSpace region. Check the region
+in the sign-in sheet matches the account you approved with, and that no VPN or proxy is
+blocking the app's own connection. If it still hangs, send the log (below).</dd>
+
+<dt>A download or upload failed partway through.</dt>
+<dd>Transfers survive individual files failing and report which ones did. Downloads can
+be cancelled and leave nothing behind. Files over 5 GiB upload in parts. If a transfer
+fails repeatedly, the log names the file and the error.</dd>
+
+<dt>Where are my logs, and what is in them?</dt>
+<dd>In the app: <strong>Help → Open Log Folder…</strong> (⇧⌘L). Logs stay on your Mac
+and are never transmitted. Attaching the relevant one makes a transfer problem far
+easier to diagnose — do glance through first for anything you would rather not send.</dd>
+
+<dt>What does SeqBridge collect about me?</dt>
+<dd>Nothing. There is no analytics and no telemetry, and no server run by the developer:
+the app talks only to the BaseSpace instance you sign in to. See the
+<a href="https://github.com/dmatica/SeqBridge/blob/main/Privacy.md">privacy policy</a>.</dd>
+
+<dt>How do I remove SeqBridge completely?</dt>
+<dd>Drag the app to the Trash. Connection profiles in <span class="path">~/.basespace</span>
+are shared with the BaseSpace CLI and are left alone — delete that folder yourself if you
+want them gone. Nothing of yours is stored anywhere else.</dd>
+
+</dl>
+
+<h2>Reporting a problem</h2>
+<p>Whatever route you use, these four things get to an answer fastest:</p>
+<ul>
+  <li>What you were doing, and what happened instead</li>
+  <li>Your macOS version and whether the Mac is Apple Silicon or Intel</li>
+  <li>The BaseSpace region the profile uses</li>
+  <li>The log from <strong>Help → Open Log Folder…</strong>, if it is a transfer problem</li>
+</ul>
+
+<footer>
+<p>SeqBridge is an independent application. It is not affiliated with, endorsed by, or
+sponsored by Illumina, Inc. "Illumina", "BaseSpace" and "BaseSpace Sequence Hub" are
+trademarks of Illumina, Inc., used here only to describe what the app connects to.</p>
+</footer>
+
+</div>
+</body>
+</html>

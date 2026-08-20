@@ -90,8 +90,10 @@ above.
 
 ## Contact
 
-<!-- TODO: replace with the address you want users and App Review to use. -->
-Questions about this policy: `<CONTACT EMAIL>`
+Questions about this policy: seqbridge.ngs@gmail.com
+
+Support, including anything not covered here:
+<https://dmatica.github.io/SeqBridge/>
 
 ---
 
