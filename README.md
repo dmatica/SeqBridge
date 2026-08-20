@@ -23,8 +23,15 @@ The download dialog shows the item's size and the free space at your chosen
 destination before it starts. Transfers run several files at a time, survive an
 individual file failing, and can be cancelled mid-flight.
 
-**Upload** — a run folder, or files into a project. Files above 5 GiB use S3
-multipart upload, with progress reported throughout.
+**Upload** — files into a project. Files above 5 GiB use S3 multipart upload,
+with progress reported throughout.
+
+Uploading a whole *run folder* needs the `write global` OAuth scope, which
+BaseSpace does not grant to SeqBridge's application registration. The control
+appears only for profiles whose token carries it — in practice, ones created
+with the BaseSpace CLI rather than in SeqBridge. Getting it for everyone
+requires Illumina to grant the scope; until then run upload stays hidden rather
+than failing halfway through.
 
 **Multiple accounts** — as many profiles as you like, switched from the toolbar,
 each with its own region and its own display name.
