@@ -26,12 +26,16 @@ individual file failing, and can be cancelled mid-flight.
 **Upload** — files into a project. Files above 5 GiB use S3 multipart upload,
 with progress reported throughout.
 
-Uploading a whole *run folder* needs the `write global` OAuth scope, which
-BaseSpace does not grant to SeqBridge's application registration. The control
-appears only for profiles whose token carries it — in practice, ones created
-with the BaseSpace CLI rather than in SeqBridge. Getting it for everyone
-requires Illumina to grant the scope; until then run upload stays hidden rather
-than failing halfway through.
+Two upload paths need the `write global` OAuth scope, which BaseSpace does not
+grant to SeqBridge's application registration: uploading a whole **run folder**,
+and uploading **FASTQ** into a project. FASTQ becomes a BaseSpace *sample*,
+which that scope covers; other file types become AppResults and are unaffected.
+
+Both are offered only to profiles whose token carries the scope — in practice
+ones created with the BaseSpace CLI rather than in SeqBridge. Otherwise the run
+upload button is hidden and FASTQ is left out of the file-type picker, rather
+than either failing partway through. Getting them back for everyone requires
+Illumina to grant the scope.
 
 **Multiple accounts** — as many profiles as you like, switched from the toolbar,
 each with its own region and its own display name.
