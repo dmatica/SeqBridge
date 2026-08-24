@@ -54,7 +54,7 @@ East:
 | Middle East | Not yet |
 
 An unregistered region is disabled in the sign-in picker with an explanation,
-rather than failing after you have already approved in a browser.
+rather than failing after you have already approved the sign-in.
 
 ## First run
 
@@ -63,8 +63,9 @@ rather than failing after you have already approved in a browser.
    once; the app cannot read anything outside that folder and the destinations
    you pick for downloads.
 2. Click **Sign In with BaseSpace**, choose your region and name the profile.
-3. A short code appears and your browser opens Illumina's sign-in page. Approve
-   there, and the profile is ready.
+3. Illumina's sign-in page opens in a secure window belonging to SeqBridge —
+   macOS asks once to allow it — alongside a short code. Approve there; the
+   window closes by itself and the profile is ready. No browser is launched.
 
 ## Where things are kept
 
@@ -83,9 +84,14 @@ sign in to. Full details, including how sign-in tokens are stored, are in the
 
 ## Support
 
-Please [open an issue](https://github.com/dmatica/SeqBridge/issues). Attaching
-the relevant log (**Help → Open Log Folder…**) makes transfer problems far
-easier to diagnose — the logs stay on your machine until you choose to share
+**[SeqBridge support](https://dmatica.github.io/SeqBridge/)** — troubleshooting,
+answers to common questions, and an email address that needs no account
+anywhere. Also reachable in the app at **Help → SeqBridge Help & Support**.
+
+If you would rather work in the open, [open an
+issue](https://github.com/dmatica/SeqBridge/issues) instead. Either way,
+attaching the relevant log (**Help → Open Log Folder…**) makes transfer problems
+far easier to diagnose — the logs stay on your machine until you choose to share
 them, so do check them for anything you would rather not post.
 
 ---

@@ -114,9 +114,10 @@
   uses, so profiles you already have are picked up automatically.</li>
   <li><strong>Sign in.</strong> Click <strong>Sign In with BaseSpace</strong>, pick your
   region, and name the profile.</li>
-  <li><strong>Approve in the browser.</strong> SeqBridge shows a short code and opens
-  Illumina's sign-in page. Approve there and the profile is ready. Nothing else needs
-  to be installed.</li>
+  <li><strong>Approve the sign-in.</strong> Illumina's sign-in page opens in a secure
+  window that belongs to SeqBridge — macOS asks once whether you want to allow it. Sign
+  in and approve there; the window closes by itself and SeqBridge comes back with the
+  profile ready. Nothing else needs to be installed.</li>
 </ol>
 
 <h2>Common questions</h2>
@@ -136,13 +137,17 @@ declining the first time.</dd>
 <dt>My region is missing from the sign-in picker.</dt>
 <dd>SeqBridge is registered in every BaseSpace region except Middle East. Unregistered
 regions are shown but disabled, with the reason, rather than failing after you have
-already approved in a browser. If you need Middle East, please email — knowing there
+already approved the sign-in. If you need Middle East, please email — knowing there
 is demand is what moves it up the list.</dd>
 
-<dt>Sign-in opened my browser but the app never picked it up.</dt>
+<dt>I approved the sign-in but the app never picked it up.</dt>
 <dd>The approval and the app have to reach the same BaseSpace region. Check the region
 in the sign-in sheet matches the account you approved with, and that no VPN or proxy is
 blocking the app's own connection. If it still hangs, send the log (below).</dd>
+
+<dt>I closed the sign-in window by mistake.</dt>
+<dd>Nothing is lost. The sheet offers <strong>Reopen Sign-In Page</strong>, and the code
+it shows stays valid — reopening is better than starting over, which issues a new code.</dd>
 
 <dt>A download or upload failed partway through.</dt>
 <dd>Transfers survive individual files failing and report which ones did. Downloads can
@@ -158,6 +163,16 @@ easier to diagnose — do glance through first for anything you would rather not
 <dd>Nothing. There is no analytics and no telemetry, and no server run by the developer:
 the app talks only to the BaseSpace instance you sign in to. See the
 <a href="https://github.com/dmatica/SeqBridge/blob/main/Privacy.md">privacy policy</a>.</dd>
+
+<dt>How do I delete my account?</dt>
+<dd>SeqBridge has no accounts of its own and cannot create one — signing in stores an
+access token for an Illumina account you already had. Illumina does not currently offer
+a way to delete a BaseSpace account yourself. An account that goes inactive, or whose
+trial ends, can lose its data, but the account itself remains; if you want yours closed,
+ask <a href="https://help.basespace.illumina.com/">Illumina</a> directly. Removing a
+connection from SeqBridge is separate and immediate: delete its
+<span class="path">.cfg</span> file from <span class="path">~/.basespace</span>, which is
+everything SeqBridge holds.</dd>
 
 <dt>How do I remove SeqBridge completely?</dt>
 <dd>Drag the app to the Trash. Connection profiles in <span class="path">~/.basespace</span>
@@ -176,6 +191,7 @@ want them gone. Nothing of yours is stored anywhere else.</dd>
 </ul>
 
 <footer>
+<p>Last updated 21 August 2026.</p>
 <p>SeqBridge is an independent application. It is not affiliated with, endorsed by, or
 sponsored by Illumina, Inc. "Illumina", "BaseSpace" and "BaseSpace Sequence Hub" are
 trademarks of Illumina, Inc., used here only to describe what the app connects to.</p>

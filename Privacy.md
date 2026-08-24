@@ -30,8 +30,8 @@ The app also checks whether the network is reachable by contacting
 ## Your BaseSpace credentials
 
 SeqBridge signs in using the OAuth 2.0 Device Authorization Grant. You enter
-your username and password on **Illumina's own sign-in page in your browser** —
-SeqBridge never sees them.
+your username and password on **Illumina's own sign-in page**, shown in a secure
+system-provided window (ASWebAuthenticationSession) — SeqBridge never sees them.
 
 What SeqBridge receives and stores is an access token, kept on your Mac in
 `~/.basespace/<profile>.cfg`. This is the same location and file format the
