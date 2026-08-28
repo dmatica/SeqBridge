@@ -63,8 +63,8 @@ rather than failing after you have already approved the sign-in.
    once; the app cannot read anything outside that folder and the destinations
    you pick for downloads.
 2. Click **Sign In with BaseSpace**, choose your region and name the profile.
-3. Illumina's sign-in page opens in a secure window belonging to SeqBridge —
-   macOS asks once to allow it — alongside a short code. Approve there; the
+3. Illumina's sign-in page opens in a window belonging to SeqBridge, showing
+   the page's address beside a lock, alongside a short code. Approve there; the
    window closes by itself and the profile is ready. No browser is launched.
 
 ## Where things are kept
