@@ -1,4 +1,5 @@
 # SeqBridge
+<img width="1280" height="800" alt="Screenshot 2026-04-10 at 10 15 41 PM" src="https://github.com/user-attachments/assets/4357d276-0233-4d8a-8e97-b87ca043cc06" />
 
 A macOS app for browsing and transferring data in [Illumina BaseSpace Sequence
 Hub](https://basespace.illumina.com) — runs, projects and app sessions — without
